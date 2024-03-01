@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\crop.png" />
+    <None Remove="Icons\line.png" />
+    <None Remove="Icons\move.png" />
+    <None Remove="Icons\pen.png" />
+    <None Remove="Icons\shape.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Icons\crop.png" />
+    <EmbeddedResource Include="Icons\line.png" />
+    <EmbeddedResource Include="Icons\move.png">
+      <CustomToolNamespace>SimpleImageEditor</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\pen.png" />
+    <EmbeddedResource Include="Icons\shape.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.95" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="main-edit-img.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
